@@ -1,0 +1,163 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+background:#eef2ff;
+
+padding:40px;
+
+}
+
+.container{
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+h1{
+
+text-align:center;
+
+margin-bottom:30px;
+
+color:#4338CA;
+
+}
+
+.card{
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+line-height:1.9;
+
+font-size:18px;
+
+white-space:pre-wrap;
+
+}
+
+.card br{
+
+margin-bottom:8px;
+
+}
+body{
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: sans-serif;
+    color:#111;
+}
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+}
+
+.card{
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+    color:#4F46E5;
+    margin-bottom:30px;
+}
+
+h2{
+    padding:12px 18px;
+    border-radius:10px;
+    color:white;
+    margin:25px 0 15px;
+}
+
+/* Different colors */
+.goal{
+    background:#2563EB;
+}
+
+.roadmap{
+    background:#7C3AED;
+}
+
+.resources{
+    background:#059669;
+}
+
+.projects{
+    background:#EA580C;
+}
+
+.tips{
+    background:#D97706;
+}
+
+hr{
+    border:none;
+    height:2px;
+    background:#ddd;
+    margin:25px 0;
+}
+.buttons{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.btn{
+    text-decoration:none;
+    background:#4F46E5;
+    color:white;
+    padding:12px 22px;
+    border-radius:8px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#3730A3;
+}
+
+.home{
+    background:#059669;
+}
+
+.home:hover{
+    background:#047857;
+}
+.badge{
+    text-align:center;
+    color:#555;
+    margin-bottom:20px;
+    font-weight:500;
+}
+.skills{
+    background:#0ea5e9;
+    color:white;
+    padding:12px 18px;
+    border-radius:10px;
+    margin:25px 0 15px;
+}
+.jobs{
+    background: #f43f5e;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    margin: 25px 0 15px;
+}

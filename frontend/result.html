@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SkillBridge AI Result</title>
+
+<link rel="stylesheet" href="result.css">
+
+</head>
+
+<body>
+
+<p class="badge">✨ AI Generated Personalized Career Roadmap</p>
+
+<div class="container">
+
+    <h1>🚀 Your AI Career Roadmap</h1>
+
+
+    <div class="card">
+        <div id="output"></div>
+
+        <div class="buttons">
+            <a href="roadmap.html" class="btn">🔄 Generate Again</a>
+            <a href="index.html" class="btn home">🏠 Home</a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+let roadmap = localStorage.getItem("roadmap");
+
+// Safety check
+if (!roadmap) {
+
+    document.getElementById("output").innerHTML =
+    "❌ No roadmap found. Please generate again.";
+
+} else {
+
+    // Formatting
+    roadmap = roadmap.replace(/━━━━━━━━━━━━━━━━━━/g, "<hr>");
+
+    roadmap = roadmap.replace(/🚀 CAREER GOAL/g, "<h2 class='goal'>🚀 Career Goal</h2>");
+    roadmap = roadmap.replace(/🗓️ LEARNING ROADMAP/g, "<h2 class='roadmap'>🗓️ Learning Roadmap</h2>");
+    roadmap = roadmap.replace(/📚 FREE RESOURCES/g, "<h2 class='resources'>📚 Free Resources</h2>");
+    roadmap = roadmap.replace(/💻 PROJECT IDEAS/g, "<h2 class='projects'>💻 Project Ideas</h2>");
+    roadmap = roadmap.replace(/📌 SKILLS REQUIRED/g, "<h2 class='skills'>📌 Skills Required</h2>");
+    roadmap = roadmap.replace(/📈 FUTURE JOBS & INDUSTRY OUTLOOK/g,
+"<h2 class='jobs'>📈 Future Jobs & Industry Outlook</h2>");
+    roadmap = roadmap.replace(/💡 SUCCESS TIPS/g, "<h2 class='tips'>💡 Success Tips</h2>");
+
+    roadmap = roadmap.replace(/\n/g, "<br>");
+
+    document.getElementById("output").innerHTML = roadmap;
+}
+
+</script>
+
+</body>
+</html>

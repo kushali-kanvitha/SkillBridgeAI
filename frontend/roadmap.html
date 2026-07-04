@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Generate Roadmap</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="roadmap.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Let's Build Your Future 🚀</h1>
+
+    <p>Answer a few questions and let AI create your personalized roadmap.</p>
+
+    <form id="careerForm">
+
+        <label>Full Name</label>
+
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label>Education</label>
+        <select id="education" required>
+
+            <option>B.Tech</option>
+
+            <option>BCA</option>
+
+            <option>MCA</option>
+
+            <option>Intermediate</option>
+
+            <option>Other</option>
+
+        </select>
+
+        <label>Current Skills</label>
+
+        <input type="text" id="skills" placeholder="HTML, CSS, Java">
+
+        <label>Career Goal</label>
+
+<input type="text" id="goal" placeholder="Example: Full Stack Java Developer" required>
+
+        <label>Study Hours Per Day</label>
+
+        <input type="number" id="hours" min="1" max="12" placeholder="3">
+
+        <label>Target Duration</label>
+
+        <select id="duration">
+
+            <option>3 Months</option>
+
+            <option>6 Months</option>
+
+            <option>1 Year</option>
+
+        </select>
+
+        <button type="submit">
+
+            Generate My AI Roadmap
+
+        </button>
+
+    </form>
+
+</div>
+<script src="roadmap.js"></script>
+</body>
+</html>

@@ -1,0 +1,442 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#F8FAFC;
+    color:#222;
+}
+
+/* NAVBAR */
+
+nav{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:white;
+
+    box-shadow:0px 3px 10px rgba(0,0,0,.08);
+
+}
+
+.logo{
+
+    font-size:30px;
+    font-weight:700;
+
+}
+
+.logo span{
+
+    color:#4F46E5;
+
+}
+
+nav ul{
+
+    display:flex;
+    gap:35px;
+
+    list-style:none;
+
+}
+
+nav a{
+
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+
+}
+
+nav a:hover{
+
+    color:#4F46E5;
+
+}
+
+/* HERO */
+
+.hero{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:80px 8%;
+
+}
+
+.left{
+
+    width:50%;
+
+}
+
+.left h1{
+
+    font-size:60px;
+
+    line-height:70px;
+
+}
+
+.left h1 span{
+
+    color:#4F46E5;
+
+}
+
+.left p{
+
+    margin:25px 0;
+
+    color:#666;
+
+    line-height:30px;
+
+    font-size:18px;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.primary{
+
+    background:#4F46E5;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+.secondary{
+
+    background:white;
+
+    border:2px solid #4F46E5;
+
+    color:#4F46E5;
+
+    padding:15px 30px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+.primary:hover{
+
+    background:#4338CA;
+
+}
+
+.secondary:hover{
+
+    background:#4F46E5;
+
+    color:white;
+
+}
+
+.right{
+
+    width:45%;
+
+}
+
+.right img{
+
+    width:100%;
+
+}
+
+/* FEATURES */
+
+.features{
+
+    padding:80px 8%;
+
+}
+
+.card2{
+    background:rgb(175, 119, 119);
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    text-align:center;
+    font-weight:600;
+}
+
+.features h2{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+    font-size:40px;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    color:#666;
+
+    line-height:28px;
+
+}
+
+@media(max-width:900px){
+
+.hero{
+
+    flex-direction:column;
+
+}
+
+.left{
+
+    width:100%;
+    text-align:center;
+
+}
+
+.right{
+
+    width:90%;
+    margin-top:50px;
+
+}
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+nav{
+
+    flex-direction:column;
+    gap:20px;
+
+}
+
+}
+/* Get Started Button */
+
+.start-btn{
+
+    text-decoration:none;
+    background:#4F46E5;
+    color:white;
+    padding:12px 25px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.start-btn:hover{
+
+    background:#3730A3;
+
+}
+
+/* How It Works */
+
+.how-it-works{
+
+    padding:80px 8%;
+    background:#EEF2FF;
+
+}
+
+.how-it-works h2{
+
+    text-align:center;
+    margin-bottom:50px;
+    font-size:40px;
+
+}
+
+.steps{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+
+}
+
+.step{
+
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.number{
+
+    width:60px;
+    height:60px;
+    background:#4F46E5;
+    color:white;
+    border-radius:50%;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:20px;
+
+}
+
+/* About */
+
+.about{
+
+    padding:80px 12%;
+    text-align:center;
+
+}
+
+.about h2{
+
+    font-size:40px;
+    margin-bottom:25px;
+
+}
+
+.about p{
+
+    font-size:18px;
+    color:#555;
+    line-height:34px;
+    max-width:900px;
+    margin:auto;
+
+}
+
+/* Get Started */
+
+.get-started{
+
+    background:linear-gradient(135deg,#4F46E5,#7C3AED);
+    color:white;
+    text-align:center;
+    padding:80px 8%;
+
+}
+
+.get-started h2{
+
+    font-size:42px;
+    margin-bottom:20px;
+
+}
+
+.get-started p{
+
+    font-size:18px;
+    margin-bottom:35px;
+
+}
+
+.get-started .primary{
+
+    background:white;
+    color:#4F46E5;
+    font-weight:600;
+
+}
+
+.get-started .primary:hover{
+
+    background:#E5E7EB;
+
+}
+
+/* Smooth Scrolling */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+@media(max-width:900px){
+
+.steps{
+
+    grid-template-columns:1fr;
+
+}
+
+}
