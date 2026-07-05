@@ -104,17 +104,17 @@ clearInterval(loading);
 
     try {
 
-        const response = await fetch("http://localhost:5000/generate-roadmap", {
+        const response = await fetch("/generate-roadmap", {
 
-            method: "POST",
+    method: "POST",
 
-            headers: {
-                "Content-Type": "application/json"
-            },
+    headers: {
+        "Content-Type": "application/json"
+    },
 
-            body: JSON.stringify(data)
+    body: JSON.stringify(data)
 
-        });
+});
 
         const result = await response.json();
         document.getElementById("loader").style.display="none";
