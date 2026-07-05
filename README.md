@@ -1,10 +1,10 @@
 # 🚀 SkillBridge AI
 
 > **AI-Powered Career Roadmap Generator for Students & Job Seekers**
-
-SkillBridge AI is an intelligent career guidance platform that helps students and job seekers discover the right learning path based on their education, current skills, career goals, and available study time. It leverages **Google Gemini AI** to generate personalized career roadmaps, recommend free learning resources, and provide career insights to help users become job-ready.
-
+SkillBridge AI is an AI-powered career guidance platform that creates personalized career roadmaps, recommends free learning resources, and helps students and job seekers achieve their career goals using Google Gemini AI.
 ---
+## 🌐 Live Demo
+🔗 https://skillbridgeai-9bun.onrender.com
 
 ## 🌟 Features
 
