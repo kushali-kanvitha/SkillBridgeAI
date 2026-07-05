@@ -28,19 +28,19 @@
     <div class="summary">
 
         <div class="summary-card">
-            <h3>⭐ Career Match</h3>
-            <h2>92%</h2>
-        </div>
+    <h3>⭐ Career Match</h3>
+    <h2 id="careerMatch">--</h2>
+</div>
 
-        <div class="summary-card">
-            <h3>📈 Job Demand</h3>
-            <h2>High</h2>
-        </div>
+<div class="summary-card">
+    <h3>📈 Job Demand</h3>
+    <h2 id="jobDemand">--</h2>
+</div>
 
-        <div class="summary-card">
-            <h3>⏳ Duration</h3>
-            <h2>3-6 Months</h2>
-        </div>
+<div class="summary-card">
+    <h3>⏳ Duration</h3>
+    <h2 id="durationCard">--</h2>
+</div>
 
     </div>
 
@@ -49,6 +49,13 @@
     <div class="card">
 
         <div id="output"></div>
+        <hr>
+
+<h2 class="jobs">📊 Career Demand Analysis</h2>
+
+<div class="chart-container">
+    <canvas id="careerChart"></canvas>
+</div>
 
         <!-- Recommended Resources -->
 
@@ -84,6 +91,7 @@
 
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 
 let roadmap = localStorage.getItem("roadmap");
@@ -333,9 +341,195 @@ W3Schools
 
 resourceContainer.innerHTML=html;
 
+let demand = 70;
+let salary = 5;
+
+/*if(goal.includes("full stack")){
+    demand = 95;
+    salary = 12;
+}
+else if(goal.includes("frontend")){
+    demand = 90;
+    salary = 10;
+}
+else if(goal.includes("backend")){
+    demand = 91;
+    salary = 11;
+}
+else if(goal.includes("java")){
+    demand = 92;
+    salary = 12;
+}
+else if(goal.includes("python")){
+    demand = 94;
+    salary = 13;
+}
+else if(goal.includes("data")){
+    demand = 93;
+    salary = 15;
+}
+else if(
+    goal.includes("ai") ||
+    goal.includes("machine learning") ||
+    goal.includes("artificial intelligence")
+){
+    demand = 98;
+    salary = 18;
+}
+else if(
+    goal.includes("government") ||
+    goal.includes("ssc") ||
+    goal.includes("upsc") ||
+    goal.includes("railway")
+)
+    {
+    demand = 80;
+    salary = 8;
+}*/
+
+let match = "80%";
+let demandText = "Moderate";
+let duration = "6 Months";
+
+if(goal.includes("full stack")){
+
+    demand = 95;
+    salary = 12;
+
+    match = "95%";
+    demandText = "Very High";
+    duration = "6-8 Months";
+}
+else if(goal.includes("frontend")){
+
+    demand = 90;
+    salary = 10;
+
+    match = "92%";
+    demandText = "High";
+    duration = "5-6 Months";
+}
+else if(goal.includes("backend")){
+
+    demand = 91;
+    salary = 11;
+
+    match = "92%";
+    demandText = "High";
+    duration = "6 Months";
+}
+else if(goal.includes("java")){
+
+    demand = 92;
+    salary = 12;
+
+    match = "93%";
+    demandText = "High";
+    duration = "6-8 Months";
+}
+else if(goal.includes("python")){
+
+    demand = 94;
+    salary = 13;
+
+    match = "94%";
+    demandText = "Very High";
+    duration = "5-6 Months";
+}
+else if(goal.includes("data")){
+
+    demand = 93;
+    salary = 15;
+
+    match = "95%";
+    demandText = "Very High";
+    duration = "8 Months";
+}
+else if(
+goal.includes("ai") ||
+goal.includes("machine learning") ||
+goal.includes("artificial intelligence")
+){
+
+    demand = 98;
+    salary = 18;
+
+    match = "99%";
+    demandText = "Excellent";
+    duration = "8-12 Months";
+}
+else if(
+goal.includes("government") ||
+goal.includes("govt") ||
+goal.includes("ssc") ||
+goal.includes("upsc") ||
+goal.includes("railway") ||
+goal.includes("bank")
+){
+
+    demand = 80;
+    salary = 8;
+
+    match = "90%";
+    demandText = "Stable";
+    duration = "1-2 Years";
+}
+document.getElementById("careerMatch").innerText = match;
+document.getElementById("jobDemand").innerText = demandText;
+document.getElementById("durationCard").innerText = duration;
+const ctx = document.getElementById("careerChart");
+
+new Chart(ctx, {
+
+    type: "bar",
+
+    data: {
+
+        labels: ["Job Demand", "Average Salary (LPA)"],
+
+        datasets: [{
+
+            data: [demand, salary],
+
+            backgroundColor: [
+                "#3B82F6",
+                "#10B981"
+            ],
+
+            borderRadius: 10
+
+        }]
+
+    },
+
+    options: {
+
+        responsive: true,
+
+        plugins: {
+
+            legend: {
+                display: false
+            }
+
+        },
+
+        scales: {
+
+            y: {
+
+                beginAtZero: true
+
+            }
+
+        }
+
+    }
+
+});
+
 }
 
 </script>
-
 </body>
 </html>
