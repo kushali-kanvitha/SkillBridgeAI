@@ -6,25 +6,29 @@
 }
 
 body{
-
-    background:#F8FAFC;
-    color:#222;
+    margin:0;
+    padding:0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    background-attachment:fixed;
+    min-height:100vh;
+    color:#ffffff;
+    
 }
 
 /* NAVBAR */
 
 nav{
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     padding:20px 8%;
-
-    background:white;
-
-    box-shadow:0px 3px 10px rgba(0,0,0,.08);
-
+    background:rgba(15,23,42,0.7);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
 .logo{
@@ -35,9 +39,7 @@ nav{
 }
 
 .logo span{
-
-    color:#4F46E5;
-
+    color:#60A5FA;
 }
 
 nav ul{
@@ -50,17 +52,14 @@ nav ul{
 }
 
 nav a{
-
     text-decoration:none;
-    color:#333;
+    color:#F8FAFC;
     font-weight:500;
-
+    transition:.3s;
 }
 
 nav a:hover{
-
-    color:#4F46E5;
-
+    color:#60A5FA;
 }
 
 /* HERO */
@@ -92,16 +91,14 @@ nav a:hover{
 }
 
 .left h1 span{
-
-    color:#4F46E5;
-
+    color:#60A5FA;
 }
 
 .left p{
 
     margin:25px 0;
 
-    color:#666;
+    color:#CBD5E1;
 
     line-height:30px;
 
@@ -118,53 +115,36 @@ nav a:hover{
 }
 
 .primary{
-
-    background:#4F46E5;
-
+    background:linear-gradient(135deg,#2563EB,#3B82F6);
     color:white;
-
     border:none;
-
     padding:15px 30px;
-
-    border-radius:10px;
-
+    border-radius:12px;
     cursor:pointer;
-
     font-size:16px;
-
-}
-
-.secondary{
-
-    background:white;
-
-    border:2px solid #4F46E5;
-
-    color:#4F46E5;
-
-    padding:15px 30px;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-    font-size:16px;
-
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(37,99,235,.35);
 }
 
 .primary:hover{
-
-    background:#4338CA;
-
+    transform:translateY(-3px);
+    background:linear-gradient(135deg,#1D4ED8,#2563EB);
+}
+.secondary{
+    background:transparent;
+    border:2px solid #60A5FA;
+    color:#60A5FA;
+    padding:15px 30px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
 }
 
 .secondary:hover{
-
-    background:#4F46E5;
-
-    color:white;
-
+    background:#60A5FA;
+    color:#0F172A;
 }
 
 .right{
@@ -217,37 +197,29 @@ nav a:hover{
 }
 
 .card{
-
-    background:white;
-
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
     padding:30px;
-
-    border-radius:20px;
-
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-
-    transition:.3s;
-
+    border-radius:22px;
+    transition:.35s;
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
 }
 
 .card:hover{
-
     transform:translateY(-10px);
-
+    border-color:#60A5FA;
+    box-shadow:0 18px 35px rgba(37,99,235,.25);
 }
 
 .card h3{
-
+    color:#F8FAFC;
     margin-bottom:15px;
-
 }
 
 .card p{
-
-    color:#666;
-
+    color:#CBD5E1;
     line-height:28px;
-
 }
 
 @media(max-width:900px){
@@ -309,10 +281,8 @@ nav{
 /* How It Works */
 
 .how-it-works{
-
     padding:80px 8%;
-    background:#EEF2FF;
-
+    background:transparent;
 }
 
 .how-it-works h2{
@@ -332,20 +302,23 @@ nav{
 }
 
 .step{
-
-    background:white;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.1);
     padding:25px;
     border-radius:20px;
     text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
 
+.step:hover{
+    transform:translateY(-8px);
 }
 
 .number{
-
     width:60px;
     height:60px;
-    background:#4F46E5;
+    background:linear-gradient(135deg,#2563EB,#60A5FA);
     color:white;
     border-radius:50%;
     margin:auto;
@@ -355,7 +328,6 @@ nav{
     font-size:24px;
     font-weight:bold;
     margin-bottom:20px;
-
 }
 
 /* About */
@@ -375,24 +347,19 @@ nav{
 }
 
 .about p{
-
-    font-size:18px;
-    color:#555;
+    color:#CBD5E1;
     line-height:34px;
-    max-width:900px;
-    margin:auto;
-
 }
 
 /* Get Started */
 
 .get-started{
-
-    background:linear-gradient(135deg,#4F46E5,#7C3AED);
+    background:linear-gradient(135deg,#1D4ED8,#2563EB);
     color:white;
     text-align:center;
     padding:80px 8%;
-
+    border-radius:30px;
+    margin:60px;
 }
 
 .get-started h2{

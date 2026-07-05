@@ -13,20 +13,73 @@
 
 <body>
 
-<p class="badge">✨ AI Generated Personalized Career Roadmap</p>
+<p class="badge">🤖 AI Generated Personalized Career Report</p>
 
 <div class="container">
 
-    <h1>🚀 Your AI Career Roadmap</h1>
+    <h1>🚀 Your AI Career Dashboard</h1>
 
+    <p class="subtitle">
+        Here's your personalized roadmap created by SkillBridge AI.
+    </p>
+
+    <!-- Summary Cards -->
+
+    <div class="summary">
+
+        <div class="summary-card">
+            <h3>⭐ Career Match</h3>
+            <h2>92%</h2>
+        </div>
+
+        <div class="summary-card">
+            <h3>📈 Job Demand</h3>
+            <h2>High</h2>
+        </div>
+
+        <div class="summary-card">
+            <h3>⏳ Duration</h3>
+            <h2>3-6 Months</h2>
+        </div>
+
+    </div>
+
+    <!-- Main Card -->
 
     <div class="card">
+
         <div id="output"></div>
 
-        <div class="buttons">
-            <a href="roadmap.html" class="btn">🔄 Generate Again</a>
-            <a href="index.html" class="btn home">🏠 Home</a>
+        <!-- Recommended Resources -->
+
+        <div class="resources-box">
+
+            <h2 class="resource-title">
+                🎓 Recommended Learning Resources
+            </h2>
+
+            <div id="resourceCards" class="resource-grid"></div>
+
         </div>
+
+    </div>
+
+    <!-- Buttons -->
+
+    <div class="buttons">
+
+        <a href="roadmap.html" class="btn">
+            🔄 Generate Again
+        </a>
+
+        <button class="btn secondary" onclick="window.print()">
+            📄 Download PDF
+        </button>
+
+        <a href="index.html" class="btn home">
+            🏠 Home
+        </a>
+
     </div>
 
 </div>
@@ -35,29 +88,251 @@
 
 let roadmap = localStorage.getItem("roadmap");
 
-// Safety check
-if (!roadmap) {
+// No roadmap found
 
-    document.getElementById("output").innerHTML =
-    "❌ No roadmap found. Please generate again.";
+if(!roadmap){
 
-} else {
+document.getElementById("output").innerHTML=
 
-    // Formatting
-    roadmap = roadmap.replace(/━━━━━━━━━━━━━━━━━━/g, "<hr>");
+"<h2>❌ No roadmap found.</h2><br>Please generate one first.";
 
-    roadmap = roadmap.replace(/🚀 CAREER GOAL/g, "<h2 class='goal'>🚀 Career Goal</h2>");
-    roadmap = roadmap.replace(/🗓️ LEARNING ROADMAP/g, "<h2 class='roadmap'>🗓️ Learning Roadmap</h2>");
-    roadmap = roadmap.replace(/📚 FREE RESOURCES/g, "<h2 class='resources'>📚 Free Resources</h2>");
-    roadmap = roadmap.replace(/💻 PROJECT IDEAS/g, "<h2 class='projects'>💻 Project Ideas</h2>");
-    roadmap = roadmap.replace(/📌 SKILLS REQUIRED/g, "<h2 class='skills'>📌 Skills Required</h2>");
-    roadmap = roadmap.replace(/📈 FUTURE JOBS & INDUSTRY OUTLOOK/g,
-"<h2 class='jobs'>📈 Future Jobs & Industry Outlook</h2>");
-    roadmap = roadmap.replace(/💡 SUCCESS TIPS/g, "<h2 class='tips'>💡 Success Tips</h2>");
+}
 
-    roadmap = roadmap.replace(/\n/g, "<br>");
+else{
 
-    document.getElementById("output").innerHTML = roadmap;
+// Format AI Output
+
+roadmap=roadmap.replace(/━━━━━━━━━━━━━━━━━━/g,"<hr>");
+
+roadmap=roadmap.replace(/🚀 CAREER GOAL/g,"<h2 class='goal'>🚀 Career Goal</h2>");
+
+roadmap=roadmap.replace(/🗓️ LEARNING ROADMAP/g,"<h2 class='roadmap'>🗓️ Learning Roadmap</h2>");
+
+roadmap=roadmap.replace(/📚 FREE RESOURCES/g,"<h2 class='resources'>📚 Free Learning Resources</h2>");
+
+roadmap=roadmap.replace(/💻 PROJECT IDEAS/g,"<h2 class='projects'>💻 Project Ideas</h2>");
+
+roadmap=roadmap.replace(/📌 SKILLS REQUIRED/g,"<h2 class='skills'>📌 Skills Required</h2>");
+
+roadmap=roadmap.replace(/📈 FUTURE JOBS & INDUSTRY OUTLOOK/g,"<h2 class='jobs'>📈 Future Jobs & Industry Outlook</h2>");
+
+roadmap=roadmap.replace(/💡 SUCCESS TIPS/g,"<h2 class='tips'>💡 Success Tips</h2>");
+
+roadmap=roadmap.replace(/\n/g,"<br>");
+
+document.getElementById("output").innerHTML=roadmap;
+
+
+// ===============================
+// Dynamic Resource Cards
+// ===============================
+
+const resourceContainer=document.getElementById("resourceCards");
+
+const goal = (localStorage.getItem("careerGoal") || "").toLowerCase();
+
+let html = "";
+
+// Full Stack
+
+if(goal.includes("full stack")){
+
+html=`
+
+<div class="resource-card">
+
+<h3>🎥 YouTube</h3>
+
+<a href="https://www.youtube.com/@SuperSimpleDev" target="_blank">
+SuperSimpleDev
+</a>
+
+<a href="https://www.youtube.com/@CodeWithHarry" target="_blank">
+CodeWithHarry
+</a>
+
+</div>
+
+<div class="resource-card">
+
+<h3>📖 Documentation</h3>
+
+<a href="https://react.dev" target="_blank">
+React Documentation
+</a>
+
+<a href="https://nodejs.org/docs/latest/api/" target="_blank">
+Node.js Documentation
+</a>
+
+</div>
+
+<div class="resource-card">
+
+<h3>💻 Practice</h3>
+
+<a href="https://leetcode.com" target="_blank">
+LeetCode
+</a>
+
+<a href="https://frontendmentor.io" target="_blank">
+Frontend Mentor
+</a>
+
+</div>
+
+`;
+
+}
+
+// AI
+
+else if(
+goal.includes("ai") ||
+goal.includes("artificial intelligence") ||
+goal.includes("machine learning")
+
+
+){
+
+html=`
+
+<div class="resource-card">
+
+<h3>🎥 AI Courses</h3>
+
+<a href="https://www.youtube.com/@freecodecamp" target="_blank">
+FreeCodeCamp AI
+</a>
+
+<a href="https://www.youtube.com/@KrishNaik06" target="_blank">
+Krish Naik
+</a>
+
+</div>
+
+<div class="resource-card">
+
+<h3>📖 Documentation</h3>
+
+<a href="https://pytorch.org/" target="_blank">
+PyTorch
+</a>
+
+<a href="https://huggingface.co/docs" target="_blank">
+Hugging Face
+</a>
+
+</div>
+
+<div class="resource-card">
+
+<h3>💻 Practice</h3>
+
+<a href="https://www.kaggle.com/" target="_blank">
+Kaggle
+</a>
+
+</div>
+
+`;
+
+}
+
+// Government
+
+else if(
+goal.includes("government") ||
+goal.includes("govt") ||
+goal.includes("ssc") ||
+goal.includes("upsc") ||
+goal.includes("bank") ||
+goal.includes("railway")
+
+){
+
+html=`
+
+<div class="resource-card">
+
+<h3>📚 YouTube</h3>
+
+<a href="https://www.youtube.com/@Adda247" target="_blank">
+Adda247
+</a>
+
+<a href="https://www.youtube.com/@StudyIQEducation" target="_blank">
+StudyIQ
+</a>
+
+<a href="https://www.youtube.com/@PWOnlyIAS" target="_blank">
+Physics Wallah
+</a>
+
+</div>
+
+<div class="resource-card">
+
+<h3>📝 Official Websites</h3>
+
+<a href="https://ssc.nic.in/" target="_blank">
+SSC
+</a>
+
+<a href="https://upsc.gov.in/" target="_blank">
+UPSC
+</a>
+
+</div>
+
+`;
+
+}
+
+// Default Resources
+
+else{
+
+html=`
+
+<div class="resource-card">
+
+<h3>🌐 Free Learning</h3>
+
+<a href="https://www.freecodecamp.org/" target="_blank">
+FreeCodeCamp
+</a>
+
+<a href="https://www.geeksforgeeks.org/" target="_blank">
+GeeksforGeeks
+</a>
+
+<a href="https://www.coursera.org/" target="_blank">
+Coursera
+</a>
+
+</div>
+
+<div class="resource-card">
+
+<h3>📖 Documentation</h3>
+
+<a href="https://developer.mozilla.org/" target="_blank">
+MDN Web Docs
+</a>
+
+<a href="https://www.w3schools.com/" target="_blank">
+W3Schools
+</a>
+
+</div>
+
+`;
+
+}
+
+resourceContainer.innerHTML=html;
+
 }
 
 </script>
